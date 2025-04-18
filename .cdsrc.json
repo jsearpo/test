@@ -3,9 +3,18 @@
         "native_hana_associations": false
     },
     "requires": {
+        "auth": {
+            "kind": "xsuaa"
+        },
+        "approuter": {
+            "kind": "cloudfoundry"
+        },
+        "db": {
+            "kind": "hana-cloud"
+        },
+        "csrf": true,
         "[production]": {
-            "auth": "xsuaa",
-            "db": "hana"
+            "auth": "xsuaa"
         }
     }
 }

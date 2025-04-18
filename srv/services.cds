@@ -13,7 +13,11 @@ service OrdersService {
 }
 
 // Reuse Admin Service
+
 using { AdminService } from '@sap/capire-products';
+@requires           : 'authenticated-user'
 extend service AdminService with {
     entity Authors as projection on db.Authors;
 }
+
+
